@@ -6,18 +6,20 @@ public class Box extends Immobile {
 
     // costruttore
 
-    public Box(String alfaCode, String adress, String cap, String city, int carSpots) {
-        super(alfaCode, adress, cap, city);
+    public Box(String alfaCode, String adress, String cap, String city, int interestedPeople, int surface, int carSpots) {
+        super(alfaCode, adress, cap, city, interestedPeople, surface);
         this.carSpots = carSpots;
     }
+
 
     // g & s
     // metodi
     // tostring
 
+
     @Override
     public String toString() {
-        return "Box{" +
+        return super.toString()+"Box{" +
                 "carSpots=" + carSpots +
                 '}';
     }

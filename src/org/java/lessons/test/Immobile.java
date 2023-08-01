@@ -22,15 +22,29 @@ public class Immobile {
     private int surface;
     // costruttori
 
-    public Immobile(String alfaCode, String adress, String cap, String city) {
+    public Immobile(String alfaCode, String adress, String cap, String city, int interestedPeople, int surface) {
         this.alfaCode = alfaCode;
         this.adress = adress;
         this.cap = cap;
         this.city = city;
+        this.interestedPeople = interestedPeople;
+        this.surface = surface;
     }
 
+
+
     // g & s
+
+    public int getSurface() {
+        return surface;
+    }
+
+    public int getInterestedPeople() {
+        return interestedPeople;
+    }
+
     // set surface
+
     public void setSurface(int surface) {
         this.surface = surface;
     }

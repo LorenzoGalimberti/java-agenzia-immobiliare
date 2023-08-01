@@ -7,11 +7,12 @@ public class Abitazione extends  Immobile {
 
     // costruttore
 
-    public Abitazione(String alfaCode, String adress, String cap, String city, int vainNumber, int bathroomNumber) {
-        super(alfaCode, adress, cap, city);
+    public Abitazione(String alfaCode, String adress, String cap, String city, int interestedPeople, int surface, int vainNumber, int bathroomNumber) {
+        super(alfaCode, adress, cap, city, interestedPeople, surface);
         this.vainNumber = vainNumber;
         this.bathroomNumber = bathroomNumber;
     }
+
 
     // getter & setter
     // metodi
