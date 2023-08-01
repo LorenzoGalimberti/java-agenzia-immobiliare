@@ -16,8 +16,9 @@ public class Main {
         System.out.println(villa.getInterestedPeople());
         System.out.println(villa.getSurface());
         villa.reimpostaSuperfici(villa.getSurface()*2,100);
-
+        villa.miPiaceImmobile();
         System.out.println(villa.getSurface());
+        System.out.println(villa.getInterestedPeople());
 
 
 

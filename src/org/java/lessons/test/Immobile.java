@@ -68,6 +68,9 @@ public class Immobile {
         this.surface= surface;
     }
 
-
+    // aumenta like di 1
+    public  void miPiaceImmobile(){
+        this.interestedPeople++;
+    }
 
 }
