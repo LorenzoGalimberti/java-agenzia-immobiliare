@@ -21,7 +21,7 @@ public class Abitazione extends  Immobile {
 
     @Override
     public String toString() {
-        return "Abitazione{" +
+        return super.toString()+"Abitazione{" +
                 "vainNumber=" + vainNumber +
                 ", bathroomNumber=" + bathroomNumber +
                 '}';

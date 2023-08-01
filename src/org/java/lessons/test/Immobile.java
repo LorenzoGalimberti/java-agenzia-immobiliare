@@ -35,6 +35,10 @@ public class Immobile {
 
     // g & s
 
+    public String getAlfaCode() {
+        return alfaCode;
+    }
+
     public int getSurface() {
         return surface;
     }

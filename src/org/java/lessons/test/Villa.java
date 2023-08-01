@@ -17,6 +17,15 @@ public class Villa extends Abitazione{
 
 
     // metodi
+    // tostring
+
+    @Override
+    public String toString() {
+        return super.toString()+"Villa{" +
+                "gardenSurface=" + gardenSurface +
+                '}';
+    }
+
     // overload
     public void reimpostaSuperfici(int surface, int superficieGiardino) {
         this.gardenSurface = superficieGiardino;

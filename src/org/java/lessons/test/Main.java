@@ -8,10 +8,14 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         // body
-        Box box = new Box("aaa","via gluck","20833","Giussano",0,40,2);
-        Abitazione abitazione= new Abitazione("aaa","via gluck","20833","Giussano",0,100,10,2);
-        Villa villa = new Villa("aab","via gluck 1a","20833","Giussano",0,300,20,4,100);
 
+        AgenziaImmobiliare agenzia = new AgenziaImmobiliare();
+        Box box = new Box("aaa","via gluck","20833","Giussano",0,40,2);
+        agenzia.aggiungiImmobile(box);
+        Abitazione abitazione= new Abitazione("aaa","via gluck","20833","Giussano",0,100,10,2);
+        agenzia.aggiungiImmobile(abitazione);
+        Villa villa = new Villa("aab","via gluck 1a","20833","Giussano",0,300,20,4,100);
+        agenzia.aggiungiImmobile(villa);
 
         System.out.println(villa.getInterestedPeople());
         System.out.println(villa.getSurface());
@@ -20,7 +24,9 @@ public class Main {
         System.out.println(villa.getSurface());
         System.out.println(villa.getInterestedPeople());
 
-
+        agenzia.stampaImmobili();
+        System.out.println(agenzia.ricercaAlfanumerico("aaa"));
+        System.out.println(agenzia.maggiorInteresse());
 
         // close scanner
         scan.close();
