@@ -17,6 +17,11 @@ public class AgenziaImmobiliare {
         immobili=new ArrayList<>();
     }
     // g e s
+
+    public List<Immobile> getImmobili() {
+        return immobili;
+    }
+
     // metodi
     // stampa immobili
     public void stampaImmobili(){
@@ -41,15 +46,21 @@ public class AgenziaImmobiliare {
     }
     // maggior numero di persone interessate
 
-    public Immobile maggiorInteresse(){
-        Immobile appoggio= null;
-        int max=0;
-        for(Immobile i : immobili){
-            if(i.getInterestedPeople()>= max){
-                max=i.getInterestedPeople();
-                appoggio=i;
+    public static List<Immobile> maggiorInteresse(List<Immobile> immobili) {
+        List<Immobile> maxInteresse = new ArrayList<>();
+        int max = 0;
+
+        for (Immobile i : immobili) {
+            int interessati = i.getInterestedPeople();
+            if (interessati > max) {
+                max = interessati;
+                maxInteresse.clear(); // Rimuoviamo gli elementi precedenti dalla lista
+                maxInteresse.add(i);  // Aggiungiamo l'attuale oggetto con il massimo interesse
+            } else if (interessati == max) {
+                maxInteresse.add(i); // Aggiungiamo l'attuale oggetto alla lista in caso di like uguali
             }
         }
-        return appoggio;
+
+        return maxInteresse;
     }
 }

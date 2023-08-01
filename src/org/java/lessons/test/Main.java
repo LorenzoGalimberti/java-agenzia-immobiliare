@@ -21,12 +21,14 @@ public class Main {
         System.out.println(villa.getSurface());
         villa.reimpostaSuperfici(villa.getSurface()*2,100);
         villa.miPiaceImmobile();
+        box.miPiaceImmobile();
         System.out.println(villa.getSurface());
         System.out.println(villa.getInterestedPeople());
 
         agenzia.stampaImmobili();
         System.out.println(agenzia.ricercaAlfanumerico("aaa"));
-        System.out.println(agenzia.maggiorInteresse());
+        System.out.println(agenzia.getImmobili());
+        System.out.println(agenzia.maggiorInteresse(agenzia.getImmobili()));
 
         // close scanner
         scan.close();
