@@ -6,8 +6,8 @@ public class Box extends Immobile {
 
     // costruttore
 
-    public Box(String alfaCode, String adress, String cap, String city, int interestedPeople, int surface, int carSpots) {
-        super(alfaCode, adress, cap, city, interestedPeople, surface);
+    public Box(String alfaCode, String adress, String cap, String city,  int surface, int carSpots) {
+        super(alfaCode, adress, cap, city,  surface);
         this.carSpots = carSpots;
     }
 

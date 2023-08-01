@@ -7,8 +7,8 @@ public class Villa extends Abitazione{
     // costruttore
 
 
-    public Villa(String alfaCode, String adress, String cap, String city, int interestedPeople, int surface, int vainNumber, int bathroomNumber, int gardenSurface) {
-        super(alfaCode, adress, cap, city, interestedPeople, surface, vainNumber, bathroomNumber);
+    public Villa(String alfaCode, String adress, String cap, String city, int surface, int vainNumber, int bathroomNumber, int gardenSurface) {
+        super(alfaCode, adress, cap, city,  surface, vainNumber, bathroomNumber);
         this.gardenSurface = gardenSurface;
     }
 

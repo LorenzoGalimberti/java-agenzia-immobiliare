@@ -38,7 +38,7 @@ public class AgenziaImmobiliare {
     // ricerca di immmobile da codice alfanumerico
     public Immobile ricercaAlfanumerico(String checkCode){
         for(Immobile i : immobili){
-            if(checkCode== i.getAlfaCode()){
+            if(checkCode.equals(i.getAlfaCode())){
                return i;
             }
         }
@@ -46,7 +46,7 @@ public class AgenziaImmobiliare {
     }
     // maggior numero di persone interessate
 
-    public static List<Immobile> maggiorInteresse(List<Immobile> immobili) {
+    public  List<Immobile> maggiorInteresse() {
         List<Immobile> maxInteresse = new ArrayList<>();
         int max = 0;
 

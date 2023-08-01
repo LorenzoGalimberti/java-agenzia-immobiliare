@@ -22,12 +22,17 @@ public class Immobile {
     private int surface;
     // costruttori
 
-    public Immobile(String alfaCode, String adress, String cap, String city, int interestedPeople, int surface) {
+    public Immobile(String alfaCode, String adress, String cap, String city, int surface) throws  ArithmeticException{
+        // validazioni
+        if(surface<0){
+            throw new ArithmeticException("metratura inferiore a 0");
+        }
+        // componenti
         this.alfaCode = alfaCode;
         this.adress = adress;
         this.cap = cap;
         this.city = city;
-        this.interestedPeople = interestedPeople;
+        this.interestedPeople = 0;
         this.surface = surface;
     }
 
@@ -43,15 +48,17 @@ public class Immobile {
         return surface;
     }
 
+    public void setSurface(int surface) {
+        this.surface = surface;
+    }
+
     public int getInterestedPeople() {
         return interestedPeople;
     }
 
     // set surface
 
-    public void setSurface(int surface) {
-        this.surface = surface;
-    }
+
     // metodi
 
     // tostring
@@ -68,8 +75,14 @@ public class Immobile {
     }
 
     // reimposta superfici 1
-    public void reimpostaSuperfici(int surface){
-        this.surface= surface;
+    public void reimpostaSuperfici(int surface) throws  ArithmeticException{
+        // validazioni
+        if(surface<0){
+            throw new ArithmeticException("metratura inferiore a 0");
+        }else{
+            this.surface= surface;
+        }
+
     }
 
     // aumenta like di 1
